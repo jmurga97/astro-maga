@@ -1,0 +1,20 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import FeaturedWork from '../components/FeaturedWork.astro';
+import Services from '../components/Services.astro';
+import Contact from '../components/Contact.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Creative Digital Studio">
+  <Header />
+  <main transition:animate="slide">
+    <Hero />
+    <FeaturedWork />
+    <Services />
+    <Contact />
+  </main>
+  <Footer />
+</Layout>

@@ -1,0 +1,23 @@
+---
+import ScrollingTitle from './ScrollingTitle.astro';
+import { projects } from '../data/projects';
+---
+<section id="work" class="py-20">
+  <ScrollingTitle text="Featured Work" />
+  <div class="w-full">
+    {projects.map(({ title, mainImage, slug }) => (
+      <a href={`/work/${slug}`} class="group relative block aspect-video overflow-hidden">
+        <div
+          class="absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-110"
+          style={`background-image: url(${mainImage})`}
+        />
+        <div class="absolute inset-0 bg-black/40 transition-opacity duration-700 group-hover:bg-black/50" />
+        <div class="absolute inset-0 flex items-center justify-center">
+          <h3 class="text-white text-4xl font-bold tracking-wider transform transition-transform duration-700 group-hover:scale-110">
+            {title}
+          </h3>
+        </div>
+      </a>
+    ))}
+  </div>
+</section>

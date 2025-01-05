@@ -1,0 +1,29 @@
+---
+import Feature from './Feature.astro';
+
+const services = [
+  {
+    title: 'Photography',
+    description: 'Professional photography and visual storytelling',
+    icon: '📸'
+  },
+  {
+    title: 'Branding',
+    description: 'Strategic brand identity and development',
+    icon: '✨'
+  },
+  {
+    title: 'UX/UI',
+    description: 'User-centered design and interface solutions',
+    icon: '🎯'
+  }
+];
+---
+<section id='services' class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+  <h2 class="text-4xl font-bold mb-12">Our Services</h2>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+    {services.map(service => (
+      <Feature {...service} />
+    ))}
+  </div>
+</section>

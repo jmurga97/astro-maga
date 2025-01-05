@@ -1,0 +1,31 @@
+---
+interface Props {
+  text: string;
+}
+
+const { text } = Astro.props;
+const repeatedText = `${text} · `.repeat(4); // Repeat text for seamless loop
+---
+<div class="overflow-hidden py-8 bg-white">
+  <div class="animate-scroll whitespace-nowrap">
+    <span class="text-8xl font-bold tracking-tight inline-block">
+      {repeatedText}
+    </span>
+  </div>
+</div>
+
+<style>
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-scroll {
+    animation: scroll 20s linear infinite;
+    will-change: transform;
+  }
+</style>

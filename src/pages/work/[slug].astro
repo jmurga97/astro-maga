@@ -1,0 +1,34 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ProjectHero from '../../components/portfolio/ProjectHero.astro';
+import ProjectGallery from '../../components/portfolio/ProjectGallery.astro';
+import ProjectDetails from '../../components/portfolio/ProjectDetails.astro';
+import ProjectNavigation from '../../components/portfolio/ProjectNavigation.astro';
+import Header from '../../components/Header.astro';
+import { projects } from '../../data/projects';
+
+export function getStaticPaths() {
+  return projects.map((project, index) => ({
+    params: { slug: project.slug },
+    props: {
+      project,
+      previousSlug: index > 0 ? projects[index - 1].slug : undefined,
+      nextSlug: index < projects.length - 1 ? projects[index + 1].slug : undefined
+    }
+  }));
+}
+
+const { project, previousSlug, nextSlug } = Astro.props;
+---
+
+<Layout title={`${project.title} | Creative Digital Studio`} transition:animate="fade">
+  <Header />
+  <ProjectHero
+    title={project.title}
+    mainImage={project.mainImage}
+    client={project.client}
+  />
+  <ProjectGallery images={project.images} />
+  <ProjectDetails project={project} />
+  <ProjectNavigation previousSlug={previousSlug} nextSlug={nextSlug} />
+</Layout>

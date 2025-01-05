@@ -1,0 +1,23 @@
+---
+interface Props {
+  title: string;
+  mainImage: string;
+  client: string;
+}
+
+const { title, mainImage, client } = Astro.props;
+---
+<section class="relative h-screen">
+  <div 
+    class="absolute inset-0 bg-cover bg-center"
+    style={`background-image: url(${mainImage})`}
+  >
+    <div class="absolute inset-0 bg-black/30"></div>
+  </div>
+  <div class="relative h-full flex items-center justify-center text-white">
+    <div class="text-center">
+      <h1 class="text-6xl md:text-8xl font-bold mb-4">{title}</h1>
+      <p class="text-xl opacity-90">Client: {client}</p>
+    </div>
+  </div>
+</section>
