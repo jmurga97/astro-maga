@@ -12,38 +12,102 @@ export interface Project {
     year: number;
     tools: string[];
   };
-  outcomes: string[];
 }
 
 export const projects: Project[] = [
   {
-    id: '1',
-    title: 'Fashion',
-    slug: 'fashion-campaign',
-    client: 'Luxury Brand Co.',
-    mainImage: 'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=2070',
+    id: '2',
+    title: 'EduInfo',
+    slug: 'eduinfo-app',
+    client: 'Educational Sector',
+    mainImage: '/images/eduinfo-main.jpg',
     images: [
-      'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=2070',
-      'https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80&w=2070',
-      'https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?q=80&w=2070'
+      '/images/eduinfo-1.webp',
+      '/images/eduinfo-2.webp',
+      '/images/eduinfo-3.webp',
+      '/images/eduinfo-4.webp',
+      '/images/eduinfo-5.webp',
+      '/images/eduinfo-6.webp',
+      '/images/eduinfo-7.webp',
+      '/images/eduinfo-8.webp',
+      '/images/eduinfo-9.webp',
+      '/images/eduinfo-10.webp',
     ],
-    overview: 'A contemporary fashion campaign that redefines luxury through minimalist photography and innovative styling.',
+    overview: 'A new app designed to help parents and guardians stay informed about their children\'s progress in school. The project addresses the communication gap between parents and teachers regarding school progress.',
     process: [
-      'Concept Development',
-      'Art Direction',
-      'Photography',
-      'Post-Production'
+      'User Research',
+      'Information Architecture',
+      'Wireframing',
+      'Prototyping',
+      'Visual Design'
     ],
     specifications: {
-      category: 'Fashion Photography',
+      category: 'Educational App',
       year: 2023,
-      tools: ['Photography', 'Lighting', 'Digital Retouching']
-    },
-    outcomes: [
-      'Increased brand engagement by 200%',
-      'Featured in Vogue Magazine',
-      'Award-winning campaign'
-    ]
+      tools: ['Figma', 'Miro', 'Google Surveys']
+    }
+  },
+  {
+    id: '3',
+    title: 'Medical Products Website',
+    slug: 'medical-products-website',
+    client: 'Medical Supplies Company',
+    mainImage: '/images/mcg-main.jpg',
+    images: [
+      '/images/mcg-2.webp',
+      '/images/mcg-3.webp',
+      '/images/mcg-4.webp',
+      '/images/mcg-5.webp',
+      '/images/mcg-6.webp',
+      '/images/mcg-7.webp',
+    ],
+    overview: 'A redesigned website for a medical products company aimed at improving user experience and making it easier for clients to find and visualize products and services.',
+    process: [
+      'User Research',
+      'Competitive Audit',
+      'Information Architecture',
+      'Wireframing',
+      'Prototyping',
+      'Visual Design'
+    ],
+    specifications: {
+      category: 'Web Design',
+      year: 2023,
+      tools: ['Sketch', 'InVision', 'Google Analytics']
+    }
+  },
+  {
+    id: '4',
+    title: 'TRANS',
+    slug: 'trans-app',
+    client: 'Public Transport Users in Venezuela',
+    mainImage: '/images/trans-main.jpg',
+    images: [
+      '/images/trans-1.webp',
+      '/images/trans-2.webp',
+      '/images/trans-3.webp',
+      '/images/trans-4.webp',
+      '/images/trans-5.webp',
+      '/images/trans-6.webp',
+      '/images/trans-7.webp',
+      '/images/trans-8.webp',
+      '/images/trans-9.webp',
+      '/images/trans-10.webp'
+    ],
+    overview: 'An app designed to help Venezuelans track public transport schedules, allowing users to plan their daily commutes more effectively.',
+    process: [
+      'User Research',
+      'Interaction Design',
+      'Wireframing',
+      'Prototyping',
+      'Information Architecture',
+      'Visual Design'
+    ],
+    specifications: {
+      category: 'Transportation App',
+      year: 2023,
+      tools: ['Adobe XD', 'Trello', 'Zoom']
+    }
   }
-  // Add more projects here
 ];
+

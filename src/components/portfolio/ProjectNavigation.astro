@@ -11,7 +11,7 @@ const { previousSlug, nextSlug } = Astro.props;
     {previousSlug && (
       <a href={`/work/${previousSlug}`} class="hover:text-gray-600">← Previous</a>
     )}
-    <a href="/work" class="hover:text-gray-600">All Work</a>
+    <a href="/#projects" class="hover:text-gray-600">All Work</a>
     {nextSlug && (
       <a href={`/work/${nextSlug}`} class="hover:text-gray-600">Next →</a>
     )}
